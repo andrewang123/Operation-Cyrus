@@ -8,10 +8,10 @@ will have n elements.
 i.e.
 n = 4
 
-1
-1 1
-1 2 1
-1 3 3 1
+1 <br>
+1 1 <br>
+1 2 1 <br>
+1 3 3 1 <br>
 
 We can see that the last row, has n (in this case 4) elements.
 

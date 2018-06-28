@@ -4,7 +4,7 @@ using namespace std;
 
 // Function Prototype
 bool isPrime(int);
-void limitedKeyboardPrinter(int);
+void limitedKeyboardPrinter(int, char);
 
 void limitedKeyboardPrinter(int n, char c){
 	

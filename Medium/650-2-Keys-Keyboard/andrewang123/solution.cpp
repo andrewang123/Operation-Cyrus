@@ -34,8 +34,41 @@ int TwoKeys(int num)
                      10 10 = 20 (WINNER therefore your path in which you need to go)
     You add the two number together and that is the weight, the one with the
     lowest weight is your answer
+    
+    Runtime comlexity
+    Big O(n)
+
+    Space Complexity
+    Big O(n)
+    
     */
-        
+        if(num <= 0) return -1; // 0 or negative
+        else if(num == 1) return 0; // only one option
+        else {
+            if(isPrime(num)) // the number is a prime number copy and paste n-1 times
+            {
+                return num;
+            } else { // calculate the greatest factor and do it
+                int times = 2; // you always have to copy in the beginning and then paste
+                int first = 0; // the first factor
+                int second = 0; // the second factor if you multipy first times second you get num
+                for(int i = 0; i < num; i++)
+                {
+                    if(num % i ==0) // if it is a factor of the number
+                    {
+                        if(i > (num/i)) // you have reached the duplicate, 2 * 50 -> 50 * 2
+                        {
+                            break;
+                        }
+                        first = i;
+                        second = num / i;
+                    }
+                }
+                int factorFirst = TwoKeys(first);
+                return factorFirst + 1 + second; // the 1 is the copy of factorFirst and the second is the num of times to paste
+            }
+
+        }        
     }
 
 bool isPrime(int n) {

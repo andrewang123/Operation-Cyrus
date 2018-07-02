@@ -39,7 +39,7 @@ int TwoKeys(int num)
     Big O(n)
 
     Space Complexity
-    Big O(n)
+    Big O(1)
     
     */
         if(num <= 0) return -1; // 0 or negative
@@ -64,7 +64,7 @@ int TwoKeys(int num)
                         second = num / i;
                     }
                 }
-                int factorFirst = TwoKeys(first);
+                int factorFirst = TwoKeys(first); // recursivly call to find the number for first
                 return factorFirst + 1 + second; // the 1 is the copy of factorFirst and the second is the num of times to paste
             }
 
